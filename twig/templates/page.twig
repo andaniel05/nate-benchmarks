@@ -1,0 +1,31 @@
+{% extends 'layout.twig' %}
+
+{% block header_content %}
+    {{ parent() }}
+    <h3>This is the page header content.</h3>
+{% endblock %}
+
+{% block main_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons %}
+                {{ include('includes/row-person.twig', {
+                    name: person.name,
+                    age: person.age,
+                    gender: person.gender,
+                } ) }}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block footer_content %}
+    {{ footer_content|raw }}
+{% endblock %}

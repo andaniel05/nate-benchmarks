@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <header>
+        {% block header_content %}
+            <h2>This is the layout header content.</h2>
+        {% endblock %}
+    </header>
+
+    <main>
+        {% block main_content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer_content %}
+        {% endblock %}
+    </footer>
+{% endblock %}
