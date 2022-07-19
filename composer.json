@@ -1,0 +1,6 @@
+{
+    "require": {
+        "thenlabs/nate": "dev-main",
+        "twig/twig": "^3.0"
+    }
+}
