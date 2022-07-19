@@ -16,7 +16,7 @@
         </thead>
         <tbody>
             <?php foreach ($this->persons->raw() as $person) : ?>
-                <?php $this->includeTemplate('includes/row-person.tpl.php', [
+                <?= $this->includeTemplate('includes/row-person.tpl.php', [
                     'name' => $person['name'],
                     'age' => $person['age'],
                     'gender' => $person['gender'],
